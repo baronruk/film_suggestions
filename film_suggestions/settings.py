@@ -54,7 +54,7 @@ ROOT_URLCONF = "film_suggestions.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "film_suggestions/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -104,18 +104,24 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# staticfiles
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath("film_suggestions/static/"),
+]
+# STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 
-STATIC_URL = "static/"
+PUBLIC_ROOT = BASE_DIR.joinpath("../public")
+MEDIA_ROOT = BASE_DIR.joinpath("media")
+STATIC_ROOT = BASE_DIR.joinpath("static")
+
+# MEDIA_URL = "https://%s/media/" % conf.http.domain
+# STATIC_URL = "https://%s/static/" % conf.http.domain
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
