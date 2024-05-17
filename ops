@@ -1,0 +1,33 @@
+#!/bin/sh
+cd "$(dirname "$0")" || exit  # change pwd to this script's directory
+
+echo_help() {
+	echo "Usage: $0 [dev|format_code]"
+}
+
+if [ "$#" = 0 ]; then
+	echo_help
+	exit 1
+fi
+
+run() {
+	isort .
+	black .
+	flake8 .
+	echo
+}
+
+command="$1"; shift
+case "$command" in
+	dev)
+		run
+		watchmedo shell-command \
+			--recursive \
+			--drop \
+			--patterns="*.py" \
+			--command='./ops format_code' .
+	;;
+	format_code)
+		run
+	;;
+esac
