@@ -1,6 +1,7 @@
 # explicit requirements
 Django==4.2.13
 flake8==7.0.0
+isort==5.13.2
 
 # requirements of requirements
 asgiref==3.8.1
