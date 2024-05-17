@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea,
+a {
+	font: 400 14px/1.3 "Roboto", Arial, Helvetica, sans-serif;
+}
