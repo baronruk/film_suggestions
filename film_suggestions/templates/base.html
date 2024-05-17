@@ -17,7 +17,10 @@
 </head>
 <body>
 	<div id="main">
-		{% block content %}{% endblock %}
+		<div class="width-wrapper">
+			{% include "film_suggestions/includes/header.html" %}
+			{% block content %}{% endblock %}
+		</div>
 	</div>
 	<script src="{% static "dist/script.js" %}"></script>
 </body>

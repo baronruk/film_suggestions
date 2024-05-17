@@ -1,3 +1,23 @@
+:root {
+    /* colors */
+    --black: #282a36;
+    --grey: #44475a;
+    --white: #f8f8f2;
+    --blue-purple: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
+    /* fonts */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,5 +30,42 @@ input,
 select,
 textarea,
 a {
-	font: 400 14px/1.3 "Roboto", Arial, Helvetica, sans-serif;
+	font: var(--regular) 14px/1.3 "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: var(--grey);
+}
+
+.width-wrapper {
+	margin-inline: 12%;
+}
+
+header {
+	padding-top: 75px;
+	padding-bottom: 60px;
+
+	text-align: center;
+	color: var(--white);
+	font-weight: var(--light);
+}
+
+header svg {
+	margin-bottom: 50px;
+}
+
+header .title {
+	margin-bottom: 15px;
+
+	font-size: 60px;
+}
+
+header .subtitle {
+	margin-bottom: 10px;
+
+	font-size: 30px;
+}
+
+header .subheading {
+	font-size: 20px;
 }
