@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Οικονομική ενίσχυση{% endblock %}
+
+{% block content %}
+	<form action="#" method="POST" id="suggestion-form" novalidate>
+		{% csrf_token %}
+
+		<div class="field {{ form.film_type.name }}
+					{% if form.film_type.errors %} error{% endif %}">
+			<div class="label">
+				{{ form.film_type.label }}
+			</div>
+			{{ form.film_type }}
+			<ul class="errorlist">
+				{% for error in form.film_type.errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="field {{ form.genre.name }}
+			{% if form.genre.errors %} error{% endif %}">
+			<div class="label">
+				{{ form.genre.label }}
+			</div>
+			{{ form.genre }}
+			<ul class="errorlist">
+				{% for error in form.genre.errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="field {{ form.release_year.name }}
+			{% if form.release_year.errors %} error{% endif %}">
+			<div class="label">
+				{{ form.release_year.label }}
+			</div>
+			{{ form.release_year }}
+			<ul class="errorlist">
+				{% for error in form.release_year.errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="field {{ form.preffered_actors.name }}
+			{% if form.preffered_actors.errors %} error{% endif %}">
+			<div class="label">
+				{{ form.preffered_actors.label }}
+			</div>
+			{{ form.preffered_actors }}
+			<ul class="errorlist">
+				{% for error in form.preffered_actors.errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="field {{ form.preffered_directors.name }}
+			{% if form.preffered_directors.errors %} error{% endif %}">
+			<div class="label">
+				{{ form.preffered_directors.label }}
+			</div>
+			{{ form.preffered_directors }}
+			<ul class="errorlist">
+				{% for error in form.preffered_directors.errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<button type="submit">
+			Submit
+		</button>
+	</form>
+{% endblock %}
