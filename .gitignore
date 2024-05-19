@@ -153,3 +153,4 @@ cython_debug/
 # Project
 /film_suggestions/dev_settings.py
 local_settings.py
+/public/
