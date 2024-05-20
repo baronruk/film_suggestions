@@ -12,12 +12,12 @@ class SuggestionForm(forms.Form):
     release_year = forms.IntegerField(
         required=False, validators=[validate_preferred_year]
     )
-    preffered_actors = forms.CharField(
+    preferred_actors = forms.CharField(
         required=False,
         widget=forms.Textarea,
         help_text="Names must be comma seperated",
     )
-    preffered_directors = forms.CharField(
+    preferred_directors = forms.CharField(
         required=False,
         widget=forms.Textarea,
         help_text="Names must be comma seperated",

@@ -35,8 +35,8 @@ def recommendations(request, signed_data):
     film_type = data.get("film_type", None)
     genre = data.get("genre", None)
     release_year = data.get("release_year", None)
-    preffered_actors = data.get("preffered_actors", None)
-    preffered_directors = data.get("directors", None)
+    preferred_actors = data.get("preferred_actors", None)
+    preferred_directors = data.get("directors", None)
 
     # create an OpenAI client
     client = OpenAI(
@@ -46,7 +46,7 @@ def recommendations(request, signed_data):
     # construct a user message with the extracted data
     user_message = (
         f"Film Type: {film_type}, Genre:{genre}, Release Year: {release_year},"
-        + f"Preferred Actors:[{preffered_actors}], Preffered directors:[{preffered_directors}]"
+        + f"Preferred Actors:[{preferred_actors}], Preferred directors:[{preferred_directors}]"
     )
 
     # generate a response from the OpenAI GPT-4 model
