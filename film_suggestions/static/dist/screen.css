@@ -1,27 +1,27 @@
 :root {
-    /* colors */
-    --black: #282a36;
-    --grey: #44475a;
-    --white: #f8f8f2;
-    --blue-purple: #6272a4;
-    --cyan: #8be9fd;
-    --green: #50fa7b;
-    --orange: #ffb86c;
-    --pink: #ff79c6;
-    --purple: #bd93f9;
-    --red: #ff5555;
-    --yellow: #f1fa8c;
-    /* fonts */
-    --light: 300;
-    --regular: 400;
-    --medium: 500;
-    --bold: 700;
+	/* colors */
+	--black: #282a36;
+	--grey: #44475a;
+	--white: #f8f8f2;
+	--blue-purple: #6272a4;
+	--cyan: #8be9fd;
+	--green: #50fa7b;
+	--orange: #ffb86c;
+	--pink: #ff79c6;
+	--purple: #bd93f9;
+	--red: #ff5555;
+	--yellow: #f1fa8c;
+	/* font-weight */
+	--light: 300;
+	--regular: 400;
+	--medium: 500;
+	--bold: 700;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html,
@@ -30,13 +30,16 @@ input,
 select,
 textarea,
 a {
-	font: var(--regular) 14px/1.3 "Roboto", Arial, Helvetica, sans-serif;
+	font:
+		var(--regular) 14px/1.3 "Roboto",
+		Arial,
+		Helvetica,
+		sans-serif;
 }
 
 body {
 	background-color: var(--grey);
 }
-
 
 #main {
 	padding-bottom: 100px;
@@ -57,8 +60,7 @@ body {
 	padding: 15px;
 
 	border-radius: 10px;
-	background-color: var(--white)
-
+	background-color: var(--white);
 }
 
 header {
@@ -80,12 +82,12 @@ header .title {
 
 @media (min-width: 801px) {
 	header .title {
-		 font-size: 60px;
+		font-size: 60px;
 	}
 }
 @media (max-width: 800px) {
-	 header .title {
-		 font-size: 40px;
+	header .title {
+		font-size: 40px;
 	}
 }
 
@@ -95,12 +97,12 @@ header .subtitle {
 
 @media (min-width: 801px) {
 	header .subtitle {
-		 font-size: 30px;
+		font-size: 30px;
 	}
 }
 @media (max-width: 800px) {
-	 header .subtitle {
-		 font-size: 20px;
+	header .subtitle {
+		font-size: 20px;
 	}
 }
 
@@ -110,12 +112,12 @@ header .subheading {
 
 @media (min-width: 801px) {
 	header .subheading {
-		 font-size: 20px;
+		font-size: 20px;
 	}
 }
 @media (max-width: 800px) {
-	 header .subheading {
-		 font-size: 15px;
+	header .subheading {
+		font-size: 15px;
 	}
 }
 
@@ -124,10 +126,9 @@ header .subheading {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
 }
 
-#main #suggestion-form .field{
+#main #suggestion-form .field {
 	margin-bottom: 10px;
 
 	max-width: 430px;
@@ -142,7 +143,7 @@ header .subheading {
 }
 
 #main #suggestion-form .field select,
-#main #suggestion-form .field input[type='number'],
+#main #suggestion-form .field input[type="number"],
 #main #suggestion-form .field textarea {
 	padding: 5px;
 	width: 100%;
@@ -158,7 +159,7 @@ header .subheading {
 	resize: none;
 }
 
-#main #suggestion-form .field.film_type #id_film_type{
+#main #suggestion-form .field.film_type #id_film_type {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -168,22 +169,22 @@ header .subheading {
 }
 
 #main #suggestion-form button {
-    display: inline-block;
-    padding: 10px 18px;
-    min-width: 200px;
+	display: inline-block;
+	padding: 10px 18px;
+	min-width: 200px;
 
-    transition: background-color 0.5s ease-in-out;
-    border-radius: 6px;
-    border: none;
+	transition: background-color 0.5s ease-in-out;
+	border-radius: 6px;
+	border: none;
 
-    background-color: var(--green);
-    color: var(--black);
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
+	background-color: var(--green);
+	color: var(--black);
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
 }
 
-#main #suggestion-form  button:hover {
-    background-color: transparent;
-    outline: 2px solid var(--black);
+#main #suggestion-form button:hover {
+	background-color: transparent;
+	outline: 2px solid var(--black);
 }
