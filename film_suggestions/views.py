@@ -9,14 +9,15 @@ from django.urls import reverse
 from openai import OpenAI
 
 from .forms import SuggestionForm
-from .helpers import unsign
+from .helpers import sign, unsign
 
 
 def landing(request):
     form = SuggestionForm(request.POST or None)
 
     if form.is_valid():
-        print(form.cleaned_data)
+        signed_data = sign("film_suggestions", form.cleaned_data)
+        return HttpResponseRedirect(reverse("recommendations", args=(signed_data,)))
 
     context = {
         "form": form,
