@@ -123,7 +123,8 @@ header .subheading {
 #main #suggestion-form .field{
 	margin-bottom: 10px;
 
-	min-width: 430px;
+	max-width: 430px;
+	width: 100%;
 }
 
 #main #suggestion-form .field .label {
@@ -145,6 +146,8 @@ header .subheading {
 }
 
 #main #suggestion-form .field textarea {
+	max-height: 150px;
+
 	resize: none;
 }
 
@@ -153,7 +156,8 @@ header .subheading {
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
-	column-gap: 5px;
+	flex-wrap: wrap;
+	gap: 7px;
 }
 
 #main #suggestion-form button {
