@@ -6,6 +6,9 @@
 {% block title %}Discover Your Next Favorite Film{% endblock %}
 
 {% block content %}
+	<div class="container-title">
+		Fill your preferences to start
+	</div>
 	<form method="POST" id="suggestion-form" novalidate>
 		{% csrf_token %}
 

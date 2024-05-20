@@ -75,11 +75,11 @@ header {
 header svg {
 	margin-bottom: 50px;
 
-  	transition: fill 0.3s ease-in-out;
+	transition: fill 0.3s ease-in-out;
 }
 
 header svg:hover {
-  fill: var(--yellow);
+	fill: var(--yellow);
 }
 
 header .title {
@@ -213,7 +213,7 @@ header .subheading {
 	outline: 2px solid var(--black);
 }
 
-.result-page-title {
+.container-title {
 	margin-bottom: 15px;
 
 	text-align: center;
@@ -221,12 +221,12 @@ header .subheading {
 }
 
 @media (min-width: 801px) {
-	.result-page-title {
+	.container-title {
 		font-size: 30px;
 	}
 }
 @media (max-width: 800px) {
-	.result-page-title {
+	.container-title {
 		font-size: 23px;
 	}
 }
