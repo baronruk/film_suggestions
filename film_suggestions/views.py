@@ -53,12 +53,12 @@ def recommendations(request, signed_data):
     response = client.chat.completions.create(
         model="gpt-4",
         temperature=0,
-        max_tokens=7000,
+        max_tokens=7192,
         messages=[
             {
                 "role": "system",
                 "content": "You are a helpful assistant that makes recommendations based on "
-                + "strictly existing films."
+                + "strictly existing films,series."
                 + "Output JSON:recommendations:title,year or error.",
             },
             {
