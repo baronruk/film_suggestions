@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load film_suggestions_tags %}
 
 {% block title %}Discover Your Next Favorite Film{% endblock %}
 
@@ -8,70 +9,11 @@
 	<form method="POST" id="suggestion-form" novalidate>
 		{% csrf_token %}
 
-		<div class="field {{ form.film_type.name }}
-					{% if form.film_type.errors %} error{% endif %}">
-			<div class="label">
-				{{ form.film_type.label }}
-			</div>
-			{{ form.film_type }}
-			<ul class="errorlist">
-				{% for error in form.film_type.errors %}
-					<li>{{ error }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="field {{ form.genre.name }}
-			{% if form.genre.errors %} error{% endif %}">
-			<div class="label">
-				{{ form.genre.label }}
-			</div>
-			{{ form.genre }}
-			<ul class="errorlist">
-				{% for error in form.genre.errors %}
-					<li>{{ error }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="field {{ form.release_year.name }}
-			{% if form.release_year.errors %} error{% endif %}">
-			<div class="label">
-				{{ form.release_year.label }}
-			</div>
-			{{ form.release_year }}
-			<ul class="errorlist">
-				{% for error in form.release_year.errors %}
-					<li>{{ error }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="field {{ form.preferred_actors.name }}
-			{% if form.preferred_actors.errors %} error{% endif %}">
-			<div class="label">
-				{{ form.preferred_actors.label }}
-			</div>
-			{{ form.preferred_actors }}
-			<ul class="errorlist">
-				{% for error in form.preferred_actors.errors %}
-					<li>{{ error }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-
-		<div class="field {{ form.preferred_directors.name }}
-			{% if form.preferred_directors.errors %} error{% endif %}">
-			<div class="label">
-				{{ form.preferred_directors.label }}
-			</div>
-			{{ form.preferred_directors }}
-			<ul class="errorlist">
-				{% for error in form.preferred_directors.errors %}
-					<li>{{ error }}</li>
-				{% endfor %}
-			</ul>
-		</div>
+		{% render_field form.film_type %}
+		{% render_field form.genre %}
+		{% render_field form.release_year %}
+		{% render_field form.preferred_actors %}
+		{% render_field form.preferred_directors %}
 
 		<button type="submit">
 			Submit
