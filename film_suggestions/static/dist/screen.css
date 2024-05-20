@@ -74,6 +74,12 @@ header {
 
 header svg {
 	margin-bottom: 50px;
+
+  	transition: fill 0.3s ease-in-out;
+}
+
+header svg:hover {
+  fill: var(--yellow);
 }
 
 header .title {
@@ -173,7 +179,7 @@ header .subheading {
 	padding: 10px 18px;
 	min-width: 200px;
 
-	transition: background-color 0.5s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 	border-radius: 6px;
 	border: none;
 
