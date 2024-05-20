@@ -5,7 +5,7 @@
 {% block title %}Discover Your Next Favorite Film{% endblock %}
 
 {% block content %}
-	<form action="#" method="POST" id="suggestion-form" novalidate>
+	<form method="POST" id="suggestion-form" novalidate>
 		{% csrf_token %}
 
 		<div class="field {{ form.film_type.name }}
