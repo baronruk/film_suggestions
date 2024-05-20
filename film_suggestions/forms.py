@@ -14,11 +14,9 @@ class SuggestionForm(forms.Form):
     )
     preferred_actors = forms.CharField(
         required=False,
-        widget=forms.Textarea,
-        help_text="Names must be comma seperated",
+        widget=forms.Textarea(attrs={"placeholder": "Names must be comma separated."}),
     )
     preferred_directors = forms.CharField(
         required=False,
-        widget=forms.Textarea,
-        help_text="Names must be comma seperated",
+        widget=forms.Textarea(attrs={"placeholder": "Names must be comma separated."}),
     )
