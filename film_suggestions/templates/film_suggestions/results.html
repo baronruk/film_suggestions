@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Discover Your Next Favorite Film{% endblock %}
+
+{% block content %}
+	<div class="result-page-title">
+		Recommendations
+	</div>
+	<div class="result-container"></div>
+	{{ results | json_script:"result-data"}}
+{% endblock %}
