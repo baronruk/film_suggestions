@@ -69,18 +69,47 @@ header svg {
 
 header .title {
 	margin-bottom: 15px;
+}
 
-	font-size: 60px;
+@media (min-width: 801px) {
+	header .title {
+		 font-size: 60px;
+	}
+}
+@media (max-width: 800px) {
+	 header .title {
+		 font-size: 40px;
+	}
 }
 
 header .subtitle {
 	margin-bottom: 10px;
+}
 
-	font-size: 30px;
+@media (min-width: 801px) {
+	header .subtitle {
+		 font-size: 30px;
+	}
+}
+@media (max-width: 800px) {
+	 header .subtitle {
+		 font-size: 20px;
+	}
 }
 
 header .subheading {
 	font-size: 20px;
+}
+
+@media (min-width: 801px) {
+	header .subheading {
+		 font-size: 20px;
+	}
+}
+@media (max-width: 800px) {
+	 header .subheading {
+		 font-size: 15px;
+	}
 }
 
 #main #suggestion-form {
