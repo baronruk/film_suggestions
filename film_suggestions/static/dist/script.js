@@ -50,7 +50,7 @@ function createFilmCard(data) {
 							<div class="value">${data['Awards']}</div>
 						</div>
 						<div class="row">
-							<div class="label">imdbRating</div>
+							<div class="label">IMDb Rating</div>
 							<div class="value">${data['imdbRating']}</div>
 						</div>
 					  </div>`;
