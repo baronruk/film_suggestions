@@ -75,6 +75,12 @@ header {
 	font-weight: var(--light);
 }
 
+header a,
+header a:visited {
+	color: var(--white);
+	text-decoration: none;
+}
+
 header svg {
 	margin-bottom: 50px;
 
