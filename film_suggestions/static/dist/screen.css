@@ -1,7 +1,9 @@
 :root {
 	/* colors */
 	--black: #282a36;
+	--dark: #0e0d11;
 	--grey: #44475a;
+	--light-grey: #282a36bf;
 	--white: #f8f8f2;
 	--blue-purple: #6272a4;
 	--cyan: #8be9fd;
@@ -38,7 +40,7 @@ a {
 }
 
 body {
-	background-color: var(--grey);
+	background-color: var(--dark);
 }
 
 #main {
@@ -59,8 +61,9 @@ body {
 .container {
 	padding: 15px;
 
+	outline: solid 2px var(--cyan);
 	border-radius: 10px;
-	background-color: var(--white);
+	background-color: var(--black);
 }
 
 header {
@@ -144,6 +147,7 @@ header .subheading {
 #main #suggestion-form .field .label {
 	margin-bottom: 10px;
 
+	color: var(--white);
 	font-size: 20px;
 	font-weight: var(--bold);
 }
@@ -154,9 +158,18 @@ header .subheading {
 	padding: 5px;
 	width: 100%;
 
+	background-color: var(--grey);
+	color: var(--white);
 	font-size: 17px;
 	border-radius: 6px;
-	border: 2px solid var(--black);
+	border: 2px solid var(--green);
+}
+
+#main #suggestion-form .field select:focus,
+#main #suggestion-form .field input[type="number"]:focus-visible,
+#main #suggestion-form .field textarea:focus-visible {
+	border: 2px solid var(--yellow);
+	outline: none;
 }
 
 #main #suggestion-form .field textarea {
@@ -172,6 +185,8 @@ header .subheading {
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 7px;
+
+	color: var(--white);
 }
 
 #main #suggestion-form .field.error {
@@ -197,7 +212,9 @@ header .subheading {
 	padding: 10px 18px;
 	min-width: 200px;
 
-	transition: background-color 0.3s ease-in-out;
+	transition:
+		background-color 0.3s ease-in-out,
+		outline 0.3s ease-in-out;
 	border-radius: 6px;
 	border: none;
 
@@ -209,13 +226,15 @@ header .subheading {
 }
 
 #main #suggestion-form button:hover {
+	color: var(--white);
 	background-color: transparent;
-	outline: 2px solid var(--black);
+	outline: 2px solid var(--green);
 }
 
 .container-title {
 	margin-bottom: 15px;
 
+	color: var(--white);
 	text-align: center;
 	font-weight: var(--bold);
 }
@@ -249,7 +268,8 @@ header .subheading {
 	max-width: 1300px;
 
 	border-radius: 6px;
-	background-color: var(--blue-purple);
+	outline: solid 2px var(--green);
+	background-color: var(--white);
 }
 
 @media (min-width: 801px) {
@@ -270,8 +290,10 @@ header .subheading {
 .result-container .film-card .info .row {
 	padding: 5px;
 
+	color: var(--white);
+	background-color: var(--light-grey);
 	border-radius: 6px;
-	outline: 2px solid var(--black);
+	outline: 2px solid var(--dark);
 }
 
 .result-container .film-card .info .row + .row {
