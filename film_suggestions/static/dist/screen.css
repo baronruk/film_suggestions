@@ -296,6 +296,8 @@ header .subheading {
 .result-container .film-card .info .row {
 	padding: 5px;
 
+	max-width: 750px;
+
 	color: var(--white);
 	background-color: var(--light-grey);
 	border-radius: 6px;
